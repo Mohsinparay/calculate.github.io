@@ -1,0 +1,122 @@
+
+*{
+	margin: 0;
+	padding: 0;
+box-sizing: border-box;
+font-family: 'IBM Plex Sans', sans-serif;
+}
+body{
+	background: url(calculator.jpg);
+	
+}
+.calculatorform{
+	width: 300px;
+	height: 570px;
+	background-color: black;
+	margin: 20px auto;
+	text-align: center;
+	border-radius: 10px;
+}
+.cal{
+	width:200px;
+	border: 2px solid blue;
+	border-radius: 10px;
+	margin-top: 15px;
+	font-size: 22px;
+
+}
+.h1{
+	color: white;
+}
+.clearbtn{
+	font-size:30px;
+	border-radius: 10px;
+	border: 2px solid darkred;
+	text-align: center;
+background: transparent;
+color: white;
+}
+.numbers{
+	font-size:30px;
+	border-radius: 10px;
+	border: 2px solid white;
+	text-align: center;
+	padding: 15px;
+	background: transparent;
+	color: red;
+	margin: 8px;
+}
+.number{font-size:20px;
+	width: 100px;
+	border-radius: 10px;
+	border: 2px solid white;
+	text-align: center;
+	background: transparent;
+	color: red;
+	margin: 8px;
+}
+#d{
+padding: 10px;
+}
+.Backbtn{
+	font-size: 20px;
+	border-radius: 800px;
+	padding: 10px;
+	width: 90px;
+	text-align: center;
+    background: transparent;
+color: white;
+border: 3px solid darkred;
+}
+
+
+
+
+
+
+.meta{
+	margin-top: 0;
+	margin-left: 500px;
+		height: 100px;
+	width: 360px;
+	cursor: default;
+	background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+	color: white;
+text-align: center;
+border-radius: 10px;
+animation: animate 1.5s linear infinite;
+
+}
+.wrapper .display{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 999;
+	background:#1b1b1b ;
+height: 90px;
+width: 340px;
+text-align: center;
+border-radius: 10px;
+border: 2px solid black;
+
+}
+
+.wrapper .display #time{
+	line-height: 85px;
+	color: #fff;
+	font-size: 50px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+	-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: animate 1.5s linear infinite;
+}
+@keyframes animate{
+	100%{
+		filter: hue-rotate(360deg);
+	}
+}
+}
+.

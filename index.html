@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator </title>
+</head>
+<body>
+<div class="meta">
+<div style="" class="wrapper">
+      <div class="display">
+          <div id="time"></div>
+      </div>
+      <span></span>
+      <span></span>
+  </div>
+  <script type="text/javascript">
+  setInterval(()=>{
+      const time = document.querySelector("#time")  ;
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    let day_night = "AM";
+if(hours > 12){
+    day_night = "PM";
+    hours = hours - 12;
+}
+
+if(hours < 10){
+    hours = "0"+ hours;
+}
+if(minutes < 10){
+    minutes = "0"+ minutes;
+}
+if(seconds < 10){
+    seconds = "0"+ seconds;
+}
+
+
+    time.textContent = hours +':' + minutes +':' + seconds + "  " + day_night 
+  })
+
+  </script>
+
+</div>
+	<form class="calculatorform" name="calculatorform">
+		<h1 class="h1">Calculator</h1>
+		<div class="screen">
+			<input type="text" name="screen"  class="cal" id="d"><br>
+			<input type="button" name="equal" value="=" onclick="Calculate()"class="number">
+
+		</div>
+		<div class="btn">
+			
+
+		</div>
+		<div class="btn">
+<input type="button" name="num1" value="1" onclick="valueButton(this);" class="numbers">
+<input type="button" name="num2" value="2" onclick="valueButton(this);" class="numbers">
+<input type="button" name="num3" value="3" onclick="valueButton(this);" class="numbers">
+<input type="button" name="plus" value="+" onclick="valueButton(this);" class="numbers">
+		</div>
+		<div class="btn">
+<input type="button" name="num4" value="4" onclick="valueButton(this);" class="numbers">
+<input type="button" name="num5" value="5" onclick="valueButton(this);" class="numbers">
+<input type="button" name="num6" value="6" onclick="valueButton(this);" class="numbers">
+<input type="button" name="sub" value="-" onclick="valueButton(this);" class="numbers">
+		</div>
+		<div class="btn">
+<input type="button" name="num7" value="7" onclick="valueButton(this);" class="numbers">
+<input type="button" name="num8" value="8" onclick="valueButton(this);" class="numbers">
+<input type="button" name="num9" value="9" onclick="valueButton(this);" class="numbers">
+<input type="button" name="mul" value="*" onclick="valueButton(this);" class="numbers">
+		</div>
+		<div class="btn">
+<input type="button" name="num0" value="0" onclick="valueButton(this);" class="numbers">
+<input type="button" name="div" value="/" onclick="valueButton(this);" class="numbers"><input type="button" name="decimal" value="." onclick="valueButton(this);" class="numbers">
+<input type="button" class="clearbtn" name="clear" value="clear" onclick="Clear()">
+<input type="button" class="Backbtn" value="&#8592" name="clear" onclick='back()'>
+		</div>
+	</form>
+	<script src="calculator.js"></script>
+</body>
+</html>
